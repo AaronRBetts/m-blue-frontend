@@ -1,0 +1,210 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primaryColor: rgb(14, 116, 141);
+  --offPrimaryColor: #d4f6ff;
+  --secondaryColor: #038713;
+  --mainWhite: #fff;
+  --offWhite: #d4f6ff;
+  --mainBlack: #222;
+  --mainGrey: #ececec;
+  --darkGrey: #cfcfcf;
+  --mainTransition: all 0.1s linear;
+  --mainSpacing: 3px;
+  --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+  --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
+}
+body {
+  padding-top: 130px;
+  color: var(--mainBlack);
+  background-color: #1f687a;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 1.4;
+}
+hr {
+    margin: 10px;
+    border-top: 1px solid rgba(14,116,141,0.2);
+    border-radius: 50%;
+    /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); */
+}
+h1 {
+  color: #0e748d;
+  font-size: 3em;
+  line-height: 1;
+  margin-bottom: 0.5em;
+}
+h2 {
+  font-size: 2em;
+  margin-bottom: 0.75em;
+}
+h3 {
+  opacity: 0.8;
+  font-size: 1.5em;
+  line-height: 1;
+  margin-bottom: 1em;
+}
+h4 {
+  font-size: 1.2em;
+  line-height: 1.25;
+  margin-bottom: 1.25em;
+}
+h5 {
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 1.5em;
+}
+h6 {
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 1.5em;
+}
+.btn-primary {
+  justify-content: center;
+  display: inline-block;
+  text-decoration: none;
+  letter-spacing: var(--mainSpacing);
+  color: var(--mainWhite);
+  background: var(--primaryColor);
+  padding: 0.4rem 0.9rem;
+  border: 3px solid var(--primaryColor);
+  transition: var(--mainTransition);
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
+}
+
+.btn-primary:hover {
+  background: transparent;
+  color: var(--primaryColor);
+}
+
+.btn-secondary {
+  justify-content: center;
+  display: inline-block;
+  text-decoration: none;
+  letter-spacing: var(--mainSpacing);
+  color: var(--primaryColor);
+  background: var(--mainWhite);
+  padding: 0.4rem 0.9rem;
+  border: 3px solid var(--primaryColor);
+  transition: var(--mainTransition);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.apptButtons .btn-secondary {
+  text-align: center;
+}
+
+.btn-secondary:hover {
+  background: var(--offWhite);
+  color: var(--primaryColor);
+}
+.navbar {
+  position: fixed;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 2rem;
+  background: white;
+  z-index: 999;
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.2s;
+}
+.navbar:hover {
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0);
+}
+.nav-logo {
+  width: 128px;
+}
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.nav-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+.nav-icon {
+  font-size: 1.5rem;
+  color: var(--primaryColor);
+}
+.nav-logo-text{
+  padding: 0 12px;
+  margin: auto;
+}
+.nav-links {
+  height: 0;
+  overflow: hidden;
+  transition: var(--mainTransition);
+  list-style-type: none;
+  margin: auto 0;
+}
+.nav-links a {
+  display: block;
+  text-decoration: none;
+  padding: 1rem 0;
+  color: var(--mainBlack);
+  transition: var(--mainTransition);
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: var(--mainSpacing);
+}
+.nav-links a:hover {
+  color: var(--primaryColor);
+}
+.nav-center {
+  justify-content: center;
+  display: flex;
+  width: 100%;
+}
+
+.show-nav {
+  height: 100vh;
+  width: 100%;
+  justify-content: center;
+}
+@media screen and (min-width: 768px) {
+  body {
+    padding-top: 163px;
+  }
+  .nav-header {
+    width: auto;
+  }
+  .nav-btn {
+    display: none;
+  }
+  .nav-links {
+    height: auto;
+    display: flex;
+  }
+  .nav-links a {
+    margin: 0 1rem;
+    padding: 0.5rem 0;
+  }
+}
+.nav-logo {
+  width: 128px;
+}
+
+.landingText b {
+    color: var(--secondaryColor);
+}
+
+.btn-primary:disabled {
+  cursor: default;
+    color: rgba(16, 16, 16, 0.3);
+    background-color: rgba(239, 239, 239, 0.3);
+    border-color: rgba(118, 118, 118, 0.3);
+}
